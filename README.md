@@ -1,0 +1,4 @@
+punctual
+--------
+
+A bash prompt.
