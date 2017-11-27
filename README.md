@@ -1,6 +1,8 @@
 punctual
 ========
 
+![punctual prompt example picture](punctual_example.png)
+
 A bash prompt.
 
 Usage
