@@ -15,7 +15,8 @@ punctual_fg="${punctual_fg:-7}"  # 0 black, 7 white
 punctual_prompt_command() {
     local last_return="$?"
 
-    PS1="\[\e[48;5;${punctual_bg};38;5;${punctual_fg}m\] \h "
+    PS1="\[\e[48;5;${punctual_bg};38;5;${punctual_bg}m\]: "
+    PS1+="\[\e[48;5;${punctual_bg};38;5;${punctual_fg}m\]\h "
 
     if [ 0 = "$last_return" ]; then
         PS1+="\[\e[0;38;5;${punctual_bg}m\]▶" # default bg; punctual_bg fg
@@ -25,6 +26,6 @@ punctual_prompt_command() {
         PS1+="\[\e[0;41m\] $last_return "
         PS1+="\[\e[0;31m\]▶"
     fi
-    PS1+="\[\e[0m\] "
+    PS1+="\e[8m\];\[\e[0m\]"
 }
 PROMPT_COMMAND="punctual_prompt_command"
