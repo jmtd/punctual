@@ -26,6 +26,6 @@ punctual_prompt_command() {
         PS1+="\[\e[0;41m\] $last_return "
         PS1+="\[\e[0;31m\]▶"
     fi
-    PS1+="\e[8m\];\[\e[0m\]"
+    PS1+="\[\e[8m\];\[\e[0m\]"
 }
 PROMPT_COMMAND="punctual_prompt_command"
